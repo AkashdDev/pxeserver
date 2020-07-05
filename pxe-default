@@ -1,0 +1,13 @@
+default menu.c32
+prompt 0
+timeout 300
+ontimeout 2
+
+menu title PXE Boot Menu
+label 1
+  menu label ^1 - Install Centos 7 x64
+  kernel centos7-boot/vmlinuz
+  append initrd=centos7-boot/initrd.img inst.ks=http://192.168.247.129/centos7-boot/anaconda-ks.cfg
+label 2
+  menu label ^2 - Boot from local media
+  localboot 0
